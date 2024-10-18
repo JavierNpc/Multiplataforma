@@ -21,15 +21,13 @@ class MainActivity : AppCompatActivity() {
         val btmHello: Button = findViewById(R.id.btmHello)
         val etName : EditText = findViewById(R.id.etName)
 
+
         btmHello.setOnClickListener {
-            
-            val tvGreeating:TextView = findViewById(R.id.tvGreeting)
-            val name:String = intent.extras?.getString("Extra_name").orEmpty()
-            tvGreeating.text = "Hola $name"
 
             val intentGA = Intent(this, Ventana1::class.java)
-            intentGA.putExtra("EXTRA_NAME", name)
+            intentGA.putExtra("EXTRA_NAME", "Caracola")
             startActivity(intentGA)
+
         }
 
 
