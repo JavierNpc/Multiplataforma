@@ -11,5 +11,5 @@ class Ventana : AppCompatActivity() {
         super.onCreate(savedInstanceState)
     }
 
-   val
+   va
 }
