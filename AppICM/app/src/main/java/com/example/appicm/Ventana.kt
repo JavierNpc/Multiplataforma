@@ -45,9 +45,8 @@ class Ventana : AppCompatActivity() {
             
         }
 
-
         when(resultado){
-            (0.0..18.5).toString() -> textVentana.text = "Bajo Peso"
+//            (0.0..18.5) -> textVentana.text = "Bajo Peso"
 //            (18.6..24.9) -> textVentana.text = "Peso Normal"
 //            (25.0..29.9) -> textVentana.text = "Sobrepeso"
 //            (30.0..34.9) -> textVentana.text = "Obesidad 1"
