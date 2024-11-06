@@ -1,8 +1,9 @@
 package com.example.appicm
 
+import android.content.Intent
 import android.icu.text.DecimalFormat
 import android.os.Bundle
-import android.support.v4.os.IResultReceiver._Parcel
+import android.view.View.OnLongClickListener
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -11,12 +12,12 @@ import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.RangeSlider
 
+
 class AppIMC : AppCompatActivity() {
-    private var isMaleSelected : Boolean = true
+    var isMaleSelected : Boolean = true
     private lateinit var viewMale: CardView
     private lateinit var viewFemale: CardView
     private lateinit var rsHeight: RangeSlider
@@ -60,27 +61,35 @@ class AppIMC : AppCompatActivity() {
             tvHeight.text = DecimalFormat("#.##").format(value) + " cm"
         }
 
+
+
         btnEdadMas.setOnClickListener{
-            tvEdad.text = DecimalFormat("##.#").format(setEdad() + 1)
+            tvEdad.text = DecimalFormat("#.#").format(setEdad() + 1)
         }
         btnEdadMenos.setOnClickListener{
-            tvEdad.text = DecimalFormat("##.#").format(setEdad() - 1)
+            tvEdad.text = DecimalFormat("#.#").format(setEdad() - 1)
         }
 
 
         btnPesoMas.setOnClickListener{
-            tvPeso.text = DecimalFormat("##.#").format(setPeso() + 1)
+            tvPeso.text = DecimalFormat("#.#").format(setPeso() + 1)
         }
 
         btnPesoMenos.setOnClickListener{
-            tvPeso.text = DecimalFormat("##.#").format(setPeso() - 1)
+            tvPeso.text = DecimalFormat("#.#").format(setPeso() - 1)
         }
 
-        btnCalcular.setOnClickListener{
+        btnCalcular.setOnClickListener {
+
+            val intentGA = Intent(this, Ventana::class.java)
+            intentGA.putExtra("peso", tvPeso.text)
+            intentGA.putExtra("edad", tvEdad.text)
+            intentGA.putExtra("altura", tvHeight.text)
+            intentGA.putExtra("sexo", isMaleSelected)
+
+            startActivity(intentGA)
 
         }
-
-
 
     }
 
