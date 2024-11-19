@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MFirstComposeTheme {
                 Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
-
+                    
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
@@ -73,7 +73,7 @@ fun MyBox() {
             contentAlignment = Alignment.Center)
         {
             Text(text = "Esto es un EJEMPLO",
-                 fontSize = 70.sp )
+                 fontSize = 30.sp )
         }
     }
 }
