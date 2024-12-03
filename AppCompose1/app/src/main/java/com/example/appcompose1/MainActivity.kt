@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.constraintlayout.compose.ChainStyle
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.example.appcompose1.ui.theme.AppCompose1Theme
 
@@ -38,18 +39,42 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Ejemplo(){
 
+
     ConstraintLayout(modifier = Modifier.fillMaxSize()){
         val (boxRed, boxBlue, boxYellow, boxMagenta)= createRefs()
+        val size = 70.dp
+        val bEnd = createEndBarrier(boxRed, boxYellow)
+        val bStart = createEndBarrier(boxRed, boxYellow)
+        val btop = createEndBarrier(boxRed, boxYellow)
+        val bButtom = createEndBarrier(boxRed, boxYellow)
 
-        Box(modifier = Modifier.size(125.dp).background(Color.Red).constrainAs(boxRed){
+        Box(modifier = Modifier.size(size).background(Color.Red).constrainAs(boxRed){
             top.linkTo(parent.top)
             start.linkTo(parent.start)
             end.linkTo(parent.end)
             bottom.linkTo(parent.bottom)
         })
-        Box(modifier = Modifier.size(125.dp).background(Color.Blue).constrainAs(boxBlue){})
-        Box(modifier = Modifier.size(125.dp).background(Color.Yellow).constrainAs(boxYellow){})
-        Box(modifier = Modifier.size(125.dp).background(Color.Magenta).constrainAs(boxMagenta){})
+        Box(modifier = Modifier.size(size).background(Color.Blue).constrainAs(boxBlue){
+            top.linkTo(parent.top)
+            end.linkTo(parent.end)
+            bottom.linkTo(parent.bottom)
+        })
+        Box(modifier = Modifier.size(size).background(Color.Yellow).constrainAs(boxYellow){
+            top.linkTo(parent.top)
+            start.linkTo(parent.start)
+            end.linkTo(boxBlue.end)
+            bottom.linkTo(parent.bottom)
+
+        })
+        Box(modifier = Modifier.size(size).background(Color.Magenta).constrainAs(boxMagenta){
+            top.linkTo(parent.top)
+            start.linkTo(parent.start)
+            bottom.linkTo(parent.bottom)
+        })
+
+       createHorizontalChain(boxRed,boxYellow,boxMagenta,boxBlue, chainStyle = ChainStyle.Spread)
+
+
     }
 }
 
