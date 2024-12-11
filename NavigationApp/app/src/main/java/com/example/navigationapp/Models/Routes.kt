@@ -11,3 +11,4 @@ sealed class Routes(val route:String) {
         fun createRoute(name:String) = "Screen5?name=$name"
     }
 }
+

@@ -23,32 +23,35 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            NavigationAppTheme {
-                val navigationController = rememberNavController()
-                NavHost(navController = navigationController, startDestination = Pantalla1.route) {
-                    composable(Pantalla1.route) { Screen1(navigationController) }
-                    composable(Pantalla2.route) { Screen2(navigationController) }
-                    composable(Pantalla3.route) { Screen3(navigationController) }
-                    composable(
-                        Pantalla4.route,
-                        arguments = listOf(navArgument("name") { type = NavType.StringType })
-                    ) {
-                        Screen4(
-                            navigationController,
-                            it.arguments?.getString("name").orEmpty()
-                        )
-                    }
-                    composable(
-                       Pantalla5.route,
-                        arguments = listOf(navArgument("name") { defaultValue = "Pepe" })
-                    ) {
-                        Screen5(
-                            navigationController,
-                            it.arguments?.getString("name").orEmpty()
-                        )
-                    }
-                }
-            }
+
+            superHeroView()
+
+//            NavigationAppTheme {
+//                val navigationController = rememberNavController()
+//                NavHost(navController = navigationController, startDestination = Pantalla1.route) {
+//                    composable(Pantalla1.route) { Screen1(navigationController) }
+//                    composable(Pantalla2.route) { Screen2(navigationController) }
+//                    composable(Pantalla3.route) { Screen3(navigationController) }
+//                    composable(
+//                        Pantalla4.route,
+//                        arguments = listOf(navArgument("name") { type = NavType.StringType })
+//                    ) {
+//                        Screen4(
+//                            navigationController,
+//                            it.arguments?.getString("name").orEmpty()
+//                        )
+//                    }
+//                    composable(
+//                       Pantalla5.route,
+//                        arguments = listOf(navArgument("name") { defaultValue = "Pepe" })
+//                    ) {
+//                        Screen5(
+//                            navigationController,
+//                            it.arguments?.getString("name").orEmpty()
+//                        )
+//                    }
+//                }
+//            }
         }
     }
 
