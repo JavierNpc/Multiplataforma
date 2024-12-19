@@ -15,7 +15,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.navigationapp.Models.Routes.*
+import com.example.navigationapp.Models.Superhero.*
 import com.example.navigationapp.ui.theme.NavigationAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,8 +23,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+        NavigationAppTheme {
+            SuperHeroView()
+        }
 
-            superHeroView()
 
 //            NavigationAppTheme {
 //                val navigationController = rememberNavController()
@@ -72,6 +74,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     NavigationAppTheme {
-        Greeting("Android")
+        SuperHeroView()
     }
+
 }
