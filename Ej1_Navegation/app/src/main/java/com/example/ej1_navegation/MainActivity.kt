@@ -22,10 +22,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Text(modifier = Modifier
-                .fillMaxSize()
-                .background(Color.Cyan),
-                text = "hola")
+            Contenido()
         }
     }
 }
