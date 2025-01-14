@@ -5,48 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76ba5aa3-7f60-4264-9a0a-e1270a871292" name="Changes" comment="mod 6 enero 2025">
-      <change afterPath="$PROJECT_DIR$/MyScaffold/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/androidTest/java/com/example/myscaffold/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/java/com/example/myscaffold/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/java/com/example/myscaffold/ui/theme/Color.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/java/com/example/myscaffold/ui/theme/Theme.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/java/com/example/myscaffold/ui/theme/Type.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/app/src/test/java/com/example/myscaffold/ExampleUnitTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/gradle/libs.versions.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyScaffold/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App_Navegacion_Nav/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/App_Navegacion_Nav/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App_Navegacion_Nav/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/App_Navegacion_Nav/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App_Navegacion_Nav/app/src/main/java/com/example/app_navegacion_nav/Models/Routes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/App_Navegacion_Nav/app/src/main/java/com/example/app_navegacion_nav/Models/Routes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/androidTest/java/com/example/loginmvvmjavi/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/java/com/example/loginmvvmjavi/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/java/com/example/loginmvvmjavi/ui/theme/Color.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/java/com/example/loginmvvmjavi/ui/theme/Theme.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/java/com/example/loginmvvmjavi/ui/theme/Type.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/test/java/com/example/loginmvvmjavi/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,18 +75,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/javmaccas/Escriptori/Multiplataforma"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/javmaccas/Escriptori/Multiplataforma&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
