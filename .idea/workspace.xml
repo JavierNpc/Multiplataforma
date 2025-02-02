@@ -4,74 +4,23 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76ba5aa3-7f60-4264-9a0a-e1270a871292" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoginMVVMJavi/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LoginMVVMJavi/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoginMVVMJavi/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LoginMVVMJavi/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/java/com/example/loginmvvmjavi/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/java/com/example/loginmvvmjavi/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/.idea/deploymentTargetSelector.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/.idea/migrations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/androidTest/java/com/example/myscaffold/ExampleInstrumentedTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/ui/theme/Color.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/ui/theme/Theme.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/ui/theme/Type.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/ui/theme/login/ui/LoginScreen.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/ui/theme/login/ui/LoginViewModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/ui/theme/login/ui/ToDoList.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/values/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/app/src/test/java/com/example/myscaffold/ExampleUnitTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/gradle/libs.versions.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/To-Do/settings.gradle.kts" beforeDir="false" />
-    </list>
+    <list default="true" id="76ba5aa3-7f60-4264-9a0a-e1270a871292" name="Changes" comment=" A clase" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="module" />
+      <option value="repository" />
+    </option>
+  </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ToDo_Javier" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -102,7 +51,7 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Javier Maceda Castro/AndroidStudioProjects/Multiplataforma/LoginInstagram_Javi"
+    "last_opened_file_path": "C:/Users/Javier Maceda Castro/AndroidStudioProjects/Multiplataforma/ToDo_Javier"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -138,7 +87,31 @@
       <option name="project" value="LOCAL" />
       <updated>1736195540676</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=" A clase">
+      <option name="closed" value="true" />
+      <created>1738534770790</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738534770790</updated>
+    </task>
+    <task id="LOCAL-00005" summary=" A clase">
+      <option name="closed" value="true" />
+      <created>1738534788769</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738534788769</updated>
+    </task>
+    <task id="LOCAL-00006" summary=" A clase">
+      <option name="closed" value="true" />
+      <created>1738535142847</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738535142847</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +127,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mod 6 enero 2025" />
-    <option name="LAST_COMMIT_MESSAGE" value="mod 6 enero 2025" />
+    <MESSAGE value=" A clase" />
+    <option name="LAST_COMMIT_MESSAGE" value=" A clase" />
   </component>
 </project>
