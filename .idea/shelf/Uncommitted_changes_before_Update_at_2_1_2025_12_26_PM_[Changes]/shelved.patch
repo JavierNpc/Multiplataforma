@@ -1,0 +1,56 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"NONE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"76ba5aa3-7f60-4264-9a0a-e1270a871292\" name=\"Changes\" comment=\"mod 6 enero 2025\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ClangdSettings\">\r\n    <option name=\"formatViaClangd\" value=\"false\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;JavierNpc&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/JavierNpc/Multiplataforma.git&quot;,\r\n    &quot;accountId&quot;: &quot;43e31d00-3b5f-4ddf-8aa1-f1c5bece487e&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 1\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2phylXwPvhpbkPa2O44srUXyWC4\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,\r\n    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,\r\n    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Javier Maceda Castro/AndroidStudioProjects/Multiplataforma&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"76ba5aa3-7f60-4264-9a0a-e1270a871292\" name=\"Changes\" comment=\"\" />\r\n      <created>1733232753013</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1733232753013</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"mod 6 enero 2025\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1736195202028</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1736195202028</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"mod 6 enero 2025\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1736195401766</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1736195401766</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"mod 6 enero 2025\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1736195540676</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1736195540676</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"mod 6 enero 2025\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"mod 6 enero 2025\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 18ec60e2ab888cb465819eb902cec251d552cce6)
++++ b/.idea/workspace.xml	(date 1736212681050)
+@@ -4,9 +4,7 @@
+     <option name="autoReloadType" value="NONE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="76ba5aa3-7f60-4264-9a0a-e1270a871292" name="Changes" comment="mod 6 enero 2025">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-    </list>
++    <list default="true" id="76ba5aa3-7f60-4264-9a0a-e1270a871292" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -83,7 +81,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1736195540676</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="mod 6 enero 2025">
++      <option name="closed" value="true" />
++      <created>1736212584492</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1736212584492</updated>
++    </task>
++    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
++      <option name="closed" value="true" />
++      <created>1736212637855</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1736212637855</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -99,6 +113,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="mod 6 enero 2025" />
+-    <option name="LAST_COMMIT_MESSAGE" value="mod 6 enero 2025" />
++    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
++    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+   </component>
+ </project>
+\ No newline at end of file
