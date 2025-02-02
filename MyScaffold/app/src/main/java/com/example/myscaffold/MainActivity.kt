@@ -60,7 +60,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyScaffoldTheme {
                 var zurdo = true
-
                 val scope = rememberCoroutineScope()
                 val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
                 ModalNavigationDrawer(

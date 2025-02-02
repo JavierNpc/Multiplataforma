@@ -134,7 +134,7 @@ fun Header(modifier: Modifier) {
 fun LoginSocial(modifier: Modifier) {
     Row(modifier = modifier) {
         Image(
-            painter =  painterResource(id = R.drawable.fb ),
+            painter =  painterResource(id = R.drawable.ic_launcher_foreground ),
             contentDescription = "LogoFB",
             modifier = Modifier.size(16.dp)
 
@@ -268,7 +268,7 @@ fun Email(email: String, function: (String) -> Unit) {
 @Composable
 fun ImageLogo(modifier: Modifier) {
    Image(
-       painter =  painterResource(id = R.drawable.insta ),
+       painter =  painterResource(id = R.drawable.ic_launcher_background ),
        contentDescription = "Logo",
        modifier = modifier
    )

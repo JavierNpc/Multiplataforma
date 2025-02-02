@@ -4,45 +4,63 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76ba5aa3-7f60-4264-9a0a-e1270a871292" name="Changes" comment="mod 6 enero 2025">
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/androidTest/java/com/example/loginmvvmjavi/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/java/com/example/loginmvvmjavi/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/java/com/example/loginmvvmjavi/ui/theme/Color.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/java/com/example/loginmvvmjavi/ui/theme/Theme.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/java/com/example/loginmvvmjavi/ui/theme/Type.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/test/java/com/example/loginmvvmjavi/ExampleUnitTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/gradle/libs.versions.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginMVVMJavi/settings.gradle.kts" afterDir="false" />
+    <list default="true" id="76ba5aa3-7f60-4264-9a0a-e1270a871292" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginMVVMJavi/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LoginMVVMJavi/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginMVVMJavi/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LoginMVVMJavi/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/java/com/example/loginmvvmjavi/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/LoginMVVMJavi/app/src/main/java/com/example/loginmvvmjavi/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/androidTest/java/com/example/myscaffold/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/ui/theme/Color.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/ui/theme/Theme.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/ui/theme/Type.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/ui/theme/login/ui/LoginScreen.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/ui/theme/login/ui/LoginViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/java/com/example/myscaffold/ui/theme/login/ui/ToDoList.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/app/src/test/java/com/example/myscaffold/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/gradle/libs.versions.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/To-Do/settings.gradle.kts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +82,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/JavierNpc/Multiplataforma.git&quot;,
-    &quot;accountId&quot;: &quot;bed6d724-b0e9-4707-aace-b70494115941&quot;
+    &quot;accountId&quot;: &quot;43e31d00-3b5f-4ddf-8aa1-f1c5bece487e&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -75,18 +93,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/javmaccas/Escriptori/Multiplataforma&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Javier Maceda Castro/AndroidStudioProjects/Multiplataforma/LoginInstagram_Javi"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
