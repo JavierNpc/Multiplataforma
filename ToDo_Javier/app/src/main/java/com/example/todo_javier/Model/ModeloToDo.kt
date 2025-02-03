@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -19,9 +20,15 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.DrawerValue
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.ModalDrawerSheet
+import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
@@ -32,6 +39,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.todo_javier.core.navegacion.NavigationController
+import kotlinx.coroutines.launch
 
 
 @Preview ( showBackground = true)
@@ -50,22 +58,97 @@ fun To_Do(
     navObjetivo: () -> Unit,
     navModal: () -> Unit
     ){
+    val scope = rememberCoroutineScope()
+    val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     Box(Modifier.background(color = Color(0xFFD2CCA8))){
-        Box(
-            Modifier
-                .fillMaxSize()
-                .padding(20.dp)
-        ) {
-            HeaderToDo(Modifier.align(Alignment.TopEnd), { navModal() })
-            BodyToDo(Modifier.align(Alignment.BottomCenter),
-                { navTarea() },
-                {navHorario()},
-                {navProgresion()},
-                {navObjetivo()},
-                {navModal()}
-            )//loginVM
+        ModalNavigationDrawer(
+            drawerState = drawerState,
+            drawerContent = {
+                ModalDrawerSheet {
+                    MyNavigationDrawer() { scope.launch { drawerState.close() } }
+                }
+            },
+            gesturesEnabled = true,
+        ){
+            Box(
+                Modifier
+                    .fillMaxSize()
+                    .padding(20.dp)
+            ) {
+                HeaderToDo(Modifier.align(Alignment.TopEnd)) { scope.launch { drawerState.open() } } }
+                BodyToDo(Modifier.align(Alignment.BottomCenter),
+                    {navTarea()},
+                    {navHorario()},
+                    {navProgresion()},
+                    {navObjetivo()},
+                    {navModal()}
+                )//loginVM
+            }
+        }
+
+    }
+
+
+
+
+@Composable
+fun MyNavigationDrawer(onCloseDrawer: () -> Unit) {
+    val col = Color(0xFF84C4B4)
+    val back_col = Color(0xFFADA576)
+    Box (modifier = Modifier
+        .background(color = back_col)
+        .fillMaxWidth(.7f).
+        fillMaxHeight()
+    )
+    {
+        Column(modifier = Modifier.padding(20.dp),
+            horizontalAlignment = Alignment.Start,
+            verticalArrangement = Arrangement.Top)
+        {
+            Box(modifier = Modifier.padding(10.dp)
+            ){
+                Text(modifier = Modifier.padding(10.dp),
+                    text = "Modal Drawer",
+                    fontSize = 27.sp
+                )
+            }
+            HorizontalDivider(Modifier.fillMaxWidth())
+            Button(modifier = Modifier.padding(10.dp)
+                .fillMaxWidth(),
+                onClick = {},
+                content = {Text("Log in")}
+            )
+            HorizontalDivider(Modifier.fillMaxWidth())
+            Button(modifier = Modifier.padding(10.dp)
+                .fillMaxWidth(),
+                onClick = {},
+                content = {Text("Log in")}
+            )
+            HorizontalDivider(Modifier.fillMaxWidth())
+            Button(modifier = Modifier.padding(10.dp)
+                .fillMaxWidth(),
+                onClick = {},
+                content = {Text("Log in")}
+            )
+            HorizontalDivider(Modifier.fillMaxWidth())
+        }
+
+        Column(modifier = Modifier.padding(20.dp)
+            .align(alignment = Alignment.BottomEnd),
+            horizontalAlignment = Alignment.Start,
+            verticalArrangement = Arrangement.Bottom)
+        {
+            HorizontalDivider(Modifier.fillMaxWidth())
+            Button(modifier = Modifier.padding(10.dp)
+                .fillMaxWidth(),
+                onClick = {},
+                content = {Text("Log in")}
+            )
+            HorizontalDivider(Modifier.fillMaxWidth())
         }
     }
+
+
 
 }
 
@@ -180,21 +263,26 @@ fun BodyToDo(
              Spacer(modifier = Modifier.size(80.dp))
          }
      }
-
 }
 
 //Hey
 @Composable
-fun HeaderToDo(mod: Modifier, navModal: () -> Unit) {
+fun HeaderToDo(mod: Modifier, function: () -> Unit) {
 
     Column {
         Spacer(modifier = Modifier.size(30.dp))
         Row(modifier = mod
-            .fillMaxWidth()
-            .padding(15.dp),
-            horizontalArrangement = Arrangement.SpaceBetween
+            .fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceAround
         ){
 
+            Icon(imageVector = Icons.Default.Menu,
+                contentDescription = "Close APP",
+                modifier = mod
+                    .clickable {function()}
+                    .size(40.dp)
+            )
+            Spacer(modifier = Modifier.size(40.dp))
             Row {
 
                 Text(text = "TO-DO",
@@ -204,12 +292,6 @@ fun HeaderToDo(mod: Modifier, navModal: () -> Unit) {
                     fontWeight = FontWeight.Bold
                 )
             }
-            Icon(imageVector = Icons.Default.Menu,
-                contentDescription = "Close APP",
-                modifier = mod
-                    .clickable {navModal() }
-                    .size(40.dp)
-            )
         }
 
     }

@@ -12,7 +12,7 @@ object Tareas_Nav
 object Horario_Nav
 
 @Serializable
-object Progresion_Nav
+object Progreso_Nav
 
 @Serializable
 object Modal_Nav

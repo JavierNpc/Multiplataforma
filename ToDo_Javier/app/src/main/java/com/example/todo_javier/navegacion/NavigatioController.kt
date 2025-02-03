@@ -5,6 +5,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.todo_javier.toDo_MVVM.Model.ModeloHorario
+import com.example.todo_javier.toDo_MVVM.Model.ModeloProgreso
+import com.example.todo_javier.toDo_MVVM.Model.ModeloTareas
 import com.example.todo_javier.toDo_MVVM.Model.To_Do
 
 @Composable
@@ -14,13 +16,25 @@ fun NavigationController() {
         composable<ToDo_Nav> {
             To_Do(
                 navTarea = { navController.navigate(Tareas_Nav) },
-                navProgresion = { navController.navigate(Progresion_Nav) },
+                navProgresion = { navController.navigate(Progreso_Nav) },
                 navHorario = { navController.navigate(Horario_Nav) },
                 navObjetivo = { navController.navigate(Objetivos_Nav) },
                 navModal = { navController.navigate(Modal_Nav) }
             )
         }
 
+        composable<Horario_Nav> {
+            ModeloHorario( /*navHome = { navController.navigate(ToDo_Nav) }*/)
+        }
+        composable<Tareas_Nav> {
+            ModeloTareas( /*navHome = { navController.navigate(ToDo_Nav) }*/)
+        }
+        composable<Progreso_Nav> {
+            ModeloProgreso( navHome = { navController.navigate(ToDo_Nav) })
+        }
+        composable<Objetivos_Nav> {
+            ModeloHorario( /*navHome = { navController.navigate(ToDo_Nav) }*/)
+        }
         composable<Horario_Nav> {
             ModeloHorario( /*navHome = { navController.navigate(ToDo_Nav) }*/)
         }
