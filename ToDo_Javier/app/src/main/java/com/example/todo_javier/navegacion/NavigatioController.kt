@@ -16,15 +16,14 @@ fun NavigationController() {
         composable<ToDo_Nav> {
             To_Do(
                 navTarea = { navController.navigate(Tareas_Nav) },
-                navProgresion = { navController.navigate(Progreso_Nav) },
-                navObjetivo = { navController.navigate(Objetivos_Nav) },
+                navProgreso = { navController.navigate(Progreso_Nav)}
             )
         }
         composable<Tareas_Nav> {
             ModeloTareas( /*navHome = { navController.navigate(ToDo_Nav) }*/)
         }
         composable<Progreso_Nav> {
-            ModeloProgreso( navHome = { navController.navigate(ToDo_Nav) })
+            ModeloProgreso( /*navHome = { navController.navigate(ToDo_Nav)}*/)
         }
         composable<Objetivos_Nav> {
           ModeloTareas()

@@ -1,6 +1,7 @@
 package com.example.todo_javier.toDo_MVVM.Model
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,11 +19,13 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -30,6 +33,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -54,7 +58,7 @@ fun VistarTareas(){
 
 @Composable
 fun ModeloTareas(/*navHome: () -> Unit*/){
-
+    val buttonsColor = Color(0xFF9D8444)
     Box(Modifier.background(color = Color(0xFFD2CCA8))
         .fillMaxSize()
     ){
@@ -67,7 +71,7 @@ fun ModeloTareas(/*navHome: () -> Unit*/){
 
         ) {
             HeaderTareas(Modifier.align(Alignment.TopCenter))
-            BodyTareas(Modifier.align(Alignment.CenterStart) )
+            BodyTareas(Modifier.align(Alignment.CenterStart),buttonsColor )
             MenuTareas(Modifier.align(Alignment.CenterEnd))
 
         }
@@ -82,15 +86,16 @@ data class EditableCardItem(
 
 
 @Composable
-fun BodyTareas(mod: Modifier) {
-    var lista_de_cards by remember { mutableStateOf(mutableListOf<EditableCardItem>()) }
-    var itemIdCounter by remember { mutableStateOf(0) }
+fun BodyTareas(mod: Modifier, buttonsColor: Color) {
+    var listaDeCards by remember { mutableStateOf(mutableListOf<EditableCardItem>()) }
+    var itemIdCounter by remember { mutableIntStateOf(0) }
 
-    Column(modifier = mod.offset(0.dp,50.dp)) {
+    Column(modifier = mod.offset(0.dp,30.dp)) {
         Box(modifier = Modifier
-            .background( Color(0xFF9B977A))
+            .background( Color(0xFF9B977A), shape = RoundedCornerShape(10))
+            .border(1.dp ,Color.Black, shape = RoundedCornerShape(10) )
             .width(270.dp)
-            .height(540.dp)
+            .height(560.dp)
 
         ){
             LazyColumn(
@@ -98,11 +103,11 @@ fun BodyTareas(mod: Modifier) {
                 contentPadding = PaddingValues(16.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                items(lista_de_cards) { item ->
+                items(listaDeCards) { item ->
                     EditableCard(
                         item = item,
                         onTextChange = { newText ->
-                            lista_de_cards = lista_de_cards.map {
+                            listaDeCards = listaDeCards.map {
                                 if (it.id == item.id) it.copy(text = newText) else it
                             }.toMutableList()
                         }
@@ -115,7 +120,7 @@ fun BodyTareas(mod: Modifier) {
             .offset((10).dp,(30.dp))){
             Button(modifier = Modifier.size(70.dp),
                 onClick = {
-                    lista_de_cards = (lista_de_cards + EditableCardItem(itemIdCounter, "Elemento #$itemIdCounter")).toMutableList()
+                    listaDeCards = (listaDeCards + EditableCardItem(itemIdCounter, "Elemento #$itemIdCounter")).toMutableList()
                     // Añadir un nuevo elemento a la lista
                     itemIdCounter++
                 },
@@ -124,23 +129,16 @@ fun BodyTareas(mod: Modifier) {
                         contentDescription = "Close APP",
                         modifier = Modifier.size(40.dp),
                     )
-                }
+                },
+                colors = ButtonColors(
+                    containerColor = buttonsColor,
+                    contentColor = Color.White,
+                    disabledContainerColor = Color.Unspecified,
+                    disabledContentColor = Color.Unspecified,
+                ),
             )
-            Text("$itemIdCounter")
         }
     }
-
-
-
-}
-
-
-
-
-@Composable
-fun EditableCardList(lista_de_cards: List<EditableCardItem>) {
-    var cardItems by remember {mutableStateOf(lista_de_cards)}
-
 }
 
 @Composable
@@ -182,16 +180,16 @@ fun EditableCard(item: EditableCardItem, onTextChange: (String) -> Unit) {
 
 @Composable
 fun HeaderTareas(mod: Modifier) {
-   Column{
-       Spacer(modifier = Modifier.size(40.dp))
-       Row(modifier = mod.fillMaxWidth()) {
-           Spacer(modifier = Modifier.size(40.dp))
-           Text(modifier = Modifier,
-               fontSize = 35.sp,
-
-               text = "Horario")
-       }
-   }
+    Column(modifier = mod.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally){
+        Spacer(modifier = Modifier.size(40.dp))
+        Row(modifier = mod){
+            Text(modifier = Modifier,
+                fontSize = 35.sp,
+                text = "TAREAS"
+            )
+        }
+    }
 
 }
 

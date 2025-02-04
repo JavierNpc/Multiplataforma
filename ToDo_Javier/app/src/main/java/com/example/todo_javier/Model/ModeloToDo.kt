@@ -1,5 +1,6 @@
 package com.example.todo_javier.toDo_MVVM.Model
 
+import androidx.activity.ComponentActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -14,7 +15,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
@@ -33,12 +33,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.todo_javier.core.navegacion.NavigationController
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 
@@ -53,9 +55,9 @@ fun Vista (){
 @Composable
 fun To_Do(
     navTarea: () -> Unit,
-    navProgresion: () -> Unit,
-    navObjetivo: () -> Unit,
+    navProgreso: () -> Unit
     ){
+    val buttonsColor = Color(0xFF9D8444)
     val scope = rememberCoroutineScope()
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     Box(Modifier.background(color = Color(0xFFD2CCA8))){
@@ -63,7 +65,7 @@ fun To_Do(
             drawerState = drawerState,
             drawerContent = {
                 ModalDrawerSheet {
-                    MyNavigationDrawer() { scope.launch { drawerState.close() } }
+                    MyNavigationDrawer(buttonsColor) { scope.launch { drawerState.close() } }
                 }
             },
             gesturesEnabled = true,
@@ -74,10 +76,10 @@ fun To_Do(
                     .padding(20.dp)
             ) {
                 HeaderToDo(Modifier.align(Alignment.TopEnd)) { scope.launch { drawerState.open() } } }
-                BodyToDo(Modifier.align(Alignment.BottomCenter),
+                BodyToDo(Modifier.align(Alignment.Center),
                     {navTarea()},
-                    {navProgresion()},
-                    {navObjetivo()},
+                    {navProgreso()},
+                    buttonsColor
                 )//loginVM
             }
         }
@@ -88,11 +90,11 @@ fun To_Do(
 
 
 @Composable
-fun MyNavigationDrawer(onCloseDrawer: () -> Unit) {
-    val col = Color(0xFF84C4B4)
-    val back_col = Color(0xFFADA576)
+fun MyNavigationDrawer(buttonsColor: Color, onCloseDrawer: () -> Job) {
+    val backCol = Color(0xFFADA576)
+    val context = LocalContext.current
     Box (modifier = Modifier
-        .background(color = back_col)
+        .background(color = backCol)
         .fillMaxWidth(.7f).
         fillMaxHeight()
     )
@@ -111,18 +113,36 @@ fun MyNavigationDrawer(onCloseDrawer: () -> Unit) {
             HorizontalDivider(Modifier.fillMaxWidth())
             Button(modifier = Modifier.padding(10.dp)
                 .fillMaxWidth(),
+                colors = ButtonColors(
+                    containerColor = buttonsColor,
+                    contentColor = Color.White,
+                    disabledContainerColor = Color.Unspecified,
+                    disabledContentColor = Color.Unspecified,
+                ),
                 onClick = {},
                 content = {Text("Log in")}
             )
             HorizontalDivider(Modifier.fillMaxWidth())
             Button(modifier = Modifier.padding(10.dp)
                 .fillMaxWidth(),
+                colors = ButtonColors(
+                    containerColor = buttonsColor,
+                    contentColor = Color.White,
+                    disabledContainerColor = Color.Unspecified,
+                    disabledContentColor = Color.Unspecified,
+                ),
                 onClick = {},
                 content = {Text("Log in")}
             )
             HorizontalDivider(Modifier.fillMaxWidth())
             Button(modifier = Modifier.padding(10.dp)
                 .fillMaxWidth(),
+                colors = ButtonColors(
+                    containerColor = buttonsColor,
+                    contentColor = Color.White,
+                    disabledContainerColor = Color.Unspecified,
+                    disabledContentColor = Color.Unspecified,
+                ),
                 onClick = {},
                 content = {Text("Log in")}
             )
@@ -137,8 +157,14 @@ fun MyNavigationDrawer(onCloseDrawer: () -> Unit) {
             HorizontalDivider(Modifier.fillMaxWidth())
             Button(modifier = Modifier.padding(10.dp)
                 .fillMaxWidth(),
-                onClick = {},
-                content = {Text("Log in")}
+                colors = ButtonColors(
+                    containerColor = Color(0xFFAB3232),
+                    contentColor = Color.White,
+                    disabledContainerColor = Color(0xFF6E1111),
+                    disabledContentColor = Color.Unspecified,
+                ),
+                onClick = {(context as ComponentActivity).finish()},
+                content = {Text("Cerrar Aplicacion")}
             )
             HorizontalDivider(Modifier.fillMaxWidth())
         }
@@ -153,109 +179,64 @@ fun MyNavigationDrawer(onCloseDrawer: () -> Unit) {
 @Composable
 fun BodyToDo(
     mod: Modifier,
-    navTarea:() -> Unit,
-    navProgresion: () -> Unit,
-    navObjetivo: () -> Unit,
+    navTarea: () -> Unit,
+    navProgreso: () -> Unit,
+    buttonsColor: Color
 ) {
     val separacion = 40
-    val altura = 250
-    val ancho = 150
+    val altura = 200
 
-     Row(modifier = mod.fillMaxWidth(),
-         horizontalArrangement = Arrangement.SpaceEvenly,
 
-     ) {
-         Column(modifier = Modifier,
-             verticalArrangement = Arrangement.SpaceBetween) {
+     Box (modifier = mod.fillMaxWidth(.9f),) {
+         Column (modifier = Modifier
+             .fillMaxWidth()
+             .fillMaxHeight(.7f),
+             verticalArrangement = Arrangement.SpaceEvenly) {
              Button(shape = RoundedCornerShape(20),
                  onClick = {navTarea()},
                  colors = ButtonColors(
-                     containerColor = Color(0xFF94946F),
+                     containerColor = buttonsColor,
                      disabledContainerColor = Color.Unspecified,
                      disabledContentColor = Color(0xFF5D5D28),
                      contentColor = Color.Unspecified
                  ),
                 modifier = Modifier
                 .height(altura.dp)
-                .width(ancho.dp)
+                .fillMaxWidth()
+
              ){
                 Text(modifier = Modifier
-                    .rotate(45F),
+                    .rotate(25F),
                     fontSize = 30.sp,
                     text = "TAREAS",
-                    fontFamily = FontFamily.Cursive,
+                    fontFamily = FontFamily.Serif,
                     fontWeight = FontWeight.Bold
                 )
              }
 
-             Spacer(modifier = Modifier.size(separacion.dp))
-
              Button(shape = RoundedCornerShape(20),
-                 onClick = {navProgresion()},
+                 onClick = {navProgreso()},
                  colors = ButtonColors(
-                     containerColor = Color(0xFF94946F),
+                     containerColor = buttonsColor,
                      disabledContainerColor = Color.Unspecified,
                      disabledContentColor = Color(0xFF5D5D28),
                      contentColor = Color.Unspecified
                  ),
                  modifier = Modifier
                      .height(altura.dp)
-                     .width(ancho.dp)
+                     .fillMaxWidth()
+
              ){
                  Text(modifier = Modifier
-                     .rotate(45F),
-                     fontSize = 18.sp,
-                     text = "PROGRESIÓN",
-                     fontFamily = FontFamily.Cursive,
+                     .rotate(25F),
+                     fontSize = 30.sp,
+                     text = "PROGRESO",
+                     fontFamily = FontFamily.Serif,
                      fontWeight = FontWeight.Bold
                  )
              }
          }
-         Column(modifier = Modifier) {
-             Button(shape = RoundedCornerShape(20),
-                 onClick = {},
-                 colors = ButtonColors(
-                     containerColor = Color(0xFF94946F),
-                     disabledContainerColor = Color.Unspecified,
-                     disabledContentColor = Color(0xFF5D5D28),
-                     contentColor = Color.Unspecified
-                 ),
-                 modifier = Modifier
-                     .height(altura.dp)
-                     .width(ancho.dp)
 
-             ){
-                 Text(modifier = Modifier
-                     .rotate(45F),
-                     fontSize = 25.sp,
-                     text = "HORARIO",
-                     fontFamily = FontFamily.Cursive,
-                     fontWeight = FontWeight.Bold
-                 )
-             }
-             Spacer(modifier = Modifier.size(separacion.dp))
-             Button(shape = RoundedCornerShape(20),
-                 onClick = {navObjetivo()},
-                 colors = ButtonColors(
-                     containerColor = Color(0xFF94946F),
-                     disabledContainerColor = Color.Unspecified,
-                     disabledContentColor = Color(0xFF5D5D28),
-                     contentColor = Color.Unspecified
-                 ),
-                 modifier = Modifier
-                     .height(altura.dp)
-                     .width(ancho.dp)
-             ){
-                 Text(modifier = Modifier
-                     .rotate(45F),
-                     fontSize = 20.sp,
-                     text = "OBJETIVOS",
-                     fontFamily = FontFamily.Cursive,
-                     fontWeight = FontWeight.Bold
-                 )
-             }
-             Spacer(modifier = Modifier.size(80.dp))
-         }
      }
 }
 
@@ -282,7 +263,7 @@ fun HeaderToDo(mod: Modifier, function: () -> Unit) {
                 Text(text = "TO-DO",
                     modifier = mod,
                     fontSize = 35.sp,
-                    fontFamily = FontFamily.Cursive,
+                    fontFamily = FontFamily.Serif,
                     fontWeight = FontWeight.Bold
                 )
             }
