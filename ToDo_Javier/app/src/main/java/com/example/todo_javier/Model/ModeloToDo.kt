@@ -53,10 +53,8 @@ fun Vista (){
 @Composable
 fun To_Do(
     navTarea: () -> Unit,
-    navHorario: () -> Unit,
     navProgresion: () -> Unit,
     navObjetivo: () -> Unit,
-    navModal: () -> Unit
     ){
     val scope = rememberCoroutineScope()
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
@@ -78,10 +76,8 @@ fun To_Do(
                 HeaderToDo(Modifier.align(Alignment.TopEnd)) { scope.launch { drawerState.open() } } }
                 BodyToDo(Modifier.align(Alignment.BottomCenter),
                     {navTarea()},
-                    {navHorario()},
                     {navProgresion()},
                     {navObjetivo()},
-                    {navModal()}
                 )//loginVM
             }
         }
@@ -158,10 +154,8 @@ fun MyNavigationDrawer(onCloseDrawer: () -> Unit) {
 fun BodyToDo(
     mod: Modifier,
     navTarea:() -> Unit,
-    navHorario: () -> Unit,
     navProgresion: () -> Unit,
     navObjetivo: () -> Unit,
-    navModal: () -> Unit
 ) {
     val separacion = 40
     val altura = 250
@@ -219,7 +213,7 @@ fun BodyToDo(
          }
          Column(modifier = Modifier) {
              Button(shape = RoundedCornerShape(20),
-                 onClick = {navHorario()},
+                 onClick = {},
                  colors = ButtonColors(
                      containerColor = Color(0xFF94946F),
                      disabledContainerColor = Color.Unspecified,

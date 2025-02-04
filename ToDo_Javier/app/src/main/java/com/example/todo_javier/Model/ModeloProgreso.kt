@@ -67,7 +67,7 @@ fun ModeloProgreso(
             HeaderProgreso(Modifier.align(Alignment.TopCenter))
             BodyProgreso(Modifier.align(Alignment.CenterStart))
             MenuProgreso(Modifier.align(Alignment.CenterEnd))
-            Progrsion_buton(Modifier.align(Alignment.BottomStart),) { navHome() }
+            Progrsion_buton(Modifier.align(Alignment.BottomStart),{ navHome() })
         }
     }
 

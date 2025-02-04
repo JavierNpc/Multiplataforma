@@ -9,13 +9,7 @@ object ToDo_Nav
 object Tareas_Nav
 
 @Serializable
-object Horario_Nav
-
-@Serializable
 object Progreso_Nav
-
-@Serializable
-object Modal_Nav
 
 @Serializable
 object Objetivos_Nav
