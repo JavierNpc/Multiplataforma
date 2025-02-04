@@ -22,7 +22,6 @@ fun NavigationController() {
                 navModal = { navController.navigate(Modal_Nav) }
             )
         }
-
         composable<Horario_Nav> {
             ModeloHorario( /*navHome = { navController.navigate(ToDo_Nav) }*/)
         }
@@ -38,6 +37,5 @@ fun NavigationController() {
         composable<Horario_Nav> {
             ModeloHorario( /*navHome = { navController.navigate(ToDo_Nav) }*/)
         }
-
     }
 }

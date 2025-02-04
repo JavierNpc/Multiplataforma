@@ -47,6 +47,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 import com.example.todo_javier.R
+import kotlinx.serialization.builtins.serializer
 
 
 @Preview( showBackground = true)
@@ -82,9 +83,9 @@ fun ModeloHorario(/*navHome: () -> Unit*/){
 
 @Composable
 fun BodyHorario(mod: Modifier) {
-    val n = 6
+    val n = 10
     val filas = (0..7).map {}
-    val columas = (0..n).map {"columna $it" }
+    val columas = (0..n).map { "hola" }
 
     Column(modifier = mod) {
         Spacer(modifier = Modifier.size(80.dp))
@@ -104,20 +105,11 @@ fun BodyHorario(mod: Modifier) {
                     ) {
                         itemsIndexed(columas){ indexcol, col->
 
-
-                            if (indexfila == 0 && indexcol == 0 ){
-                                Box(modifier = Modifier.padding(10.dp)){
-                                    Text("")
-                                }
-                            }else if(indexfila == 1 && indexcol==0){
-                                Box(modifier = Modifier.padding(10.dp)){
-                                    Text("LUNES")
-                                }
-                            }else{
-                                Box(modifier = Modifier.padding(10.dp)){
-                                    Text(col)
-                                }
+                            Box(modifier = Modifier.padding(10.dp)){
+                                Text(col)
                             }
+
+
                         }
                     }
                 }

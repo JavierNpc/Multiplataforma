@@ -73,8 +73,27 @@ fun Footer(mod: Modifier) {
             thickness = 1.dp,
             color = Color(0xFF9f9f9f),
             modifier = Modifier.fillMaxWidth()
-
         )
+        Spacer(Modifier.size(8.dp))
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.fb),
+                contentDescription = "LogoFB",
+                modifier = Modifier.size(16.dp)
+            )
+            Text(
+                text = "Continue as David",
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(horizontal = 8.dp),
+                color = Color(0xFF4EA8E9)
+            )
+        }
+
     }
 
 }
@@ -101,7 +120,7 @@ fun Body(mod: Modifier, loginVM: LoginViewModel) {
         LoginButton(isLoginEnable)
         Spacer(modifier = Modifier.size(16.dp))
         LoginDivider()
-        Spacer(modifier = Modifier.size(32.dp))
+        Spacer(modifier = Modifier.size(25.dp))
         SocialLogin()
     }
 }
