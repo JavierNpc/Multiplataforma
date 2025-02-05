@@ -20,6 +20,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardColors
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -31,7 +33,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
@@ -191,50 +193,11 @@ fun BodyToDo(
          Column (modifier = Modifier
              .fillMaxWidth()
              .fillMaxHeight(.7f),
-             verticalArrangement = Arrangement.SpaceEvenly) {
-             Button(shape = RoundedCornerShape(20),
-                 onClick = {navTarea()},
-                 colors = ButtonColors(
-                     containerColor = buttonsColor,
-                     disabledContainerColor = Color.Unspecified,
-                     disabledContentColor = Color(0xFF5D5D28),
-                     contentColor = Color.Unspecified
-                 ),
-                modifier = Modifier
-                .height(altura.dp)
-                .fillMaxWidth()
-
-             ){
-                Text(modifier = Modifier
-                    .rotate(25F),
-                    fontSize = 30.sp,
-                    text = "TAREAS",
-                    fontFamily = FontFamily.Serif,
-                    fontWeight = FontWeight.Bold
-                )
-             }
-
-             Button(shape = RoundedCornerShape(20),
-                 onClick = {navProgreso()},
-                 colors = ButtonColors(
-                     containerColor = buttonsColor,
-                     disabledContainerColor = Color.Unspecified,
-                     disabledContentColor = Color(0xFF5D5D28),
-                     contentColor = Color.Unspecified
-                 ),
-                 modifier = Modifier
-                     .height(altura.dp)
-                     .fillMaxWidth()
-
-             ){
-                 Text(modifier = Modifier
-                     .rotate(25F),
-                     fontSize = 30.sp,
-                     text = "PROGRESO",
-                     fontFamily = FontFamily.Serif,
-                     fontWeight = FontWeight.Bold
-                 )
-             }
+             verticalArrangement = Arrangement.Center)
+         {
+             BotonInicio("TAREAS", navTarea )
+             Spacer(Modifier.size(16.dp))
+             BotonInicio("PROGRESO", navProgreso)
          }
 
      }
@@ -268,7 +231,36 @@ fun HeaderToDo(mod: Modifier, function: () -> Unit) {
                 )
             }
         }
+    }
+}
 
+@Composable
+fun BotonInicio(title: String, navegar: () -> Unit) {
+    Card( shape = RoundedCornerShape(16.dp),
+        onClick = {navegar()},
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(120.dp)
+            .shadow(6.dp, shape = RoundedCornerShape(16.dp)),
+        colors = CardColors(
+            containerColor = Color.Unspecified,
+            contentColor = Color.Unspecified,
+            disabledContainerColor = Color.Unspecified,
+            disabledContentColor = Color.Unspecified,
+        ),
+
+    ) {
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = title,
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Black
+            )
+        }
     }
 }
 
