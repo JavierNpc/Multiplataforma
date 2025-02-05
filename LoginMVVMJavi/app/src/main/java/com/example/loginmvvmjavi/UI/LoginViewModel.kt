@@ -1,4 +1,4 @@
-package com.example.loginmvvmjavi.ui.theme.login.UI
+package com.example.loginmvvmjavi.UI
 
 import android.util.Patterns
 import androidx.lifecycle.LiveData
