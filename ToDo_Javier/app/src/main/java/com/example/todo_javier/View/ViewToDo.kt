@@ -40,15 +40,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.todo_javier.core.navegacion.NavigationController
+import com.example.todo_javier.navegacion.ToDo_Nav
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-
-@Preview ( showBackground = true)
-@Composable
-fun Vista (){
-    NavigationController()
-}
 
 
 

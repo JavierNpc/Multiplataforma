@@ -6,6 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -20,9 +21,12 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderColors
 import androidx.compose.material3.Switch
@@ -30,6 +34,8 @@ import androidx.compose.material3.SwitchColors
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldColors
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -41,11 +47,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.DefaultTintColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 import com.example.todo_javier.R
+import com.example.todo_javier.toDo_MVVM.ViewModel.TareasViewModel
 
 
 @Preview( showBackground = true)
@@ -58,50 +66,26 @@ fun Vistarprogreso (){
 
 @Composable
 fun ModeloProgreso(/* navHome: () -> Unit,*/){
-    val buttonsColor = Color(0xFF9D8444)
-    Box(Modifier.background(color = Color(0xFFD2CCA8))
-        .fillMaxSize()
-    ){
 
-        Box(
-            Modifier
-                .fillMaxSize()
-                .padding(20.dp)
-        ) {
-            HeaderProgreso(Modifier.align(Alignment.TopCenter))
-            BodyProgreso(Modifier.align(Alignment.CenterStart),buttonsColor)
-            MenuProgreso(Modifier.align(Alignment.CenterEnd))
-            Progrsion_buton(Modifier.align(Alignment.BottomStart),buttonsColor)
-            //{ navHome() })
-        }
-    }
+        val buttonsColor = Color(0xFF9D8444)
 
-}
-
-@Composable
-fun Progrsion_buton(
-    mod: Modifier, /* function: () -> Unit*/
-    buttonsColor: Color
-) {
-    Box(modifier = mod
-        .offset((10).dp)){
-        Button(modifier = Modifier.size(70.dp),
-            onClick = {/*function()*/},
-            content = {
-                Icon(imageVector =ImageVector.vectorResource(R.drawable.dots),
-                    contentDescription = "Close APP",
-                    modifier = Modifier.size(40.dp)
-                )
+        Scaffold(
+            topBar = { HeaderProgreso(buttonsColor) },
+            content = { padding ->
+                Box(
+                    Modifier
+                        .fillMaxSize()
+                        .background(Color.White)
+                        .padding(padding)
+                ) {
+                    BodyProgreso( Modifier.align(Alignment.Center), buttonsColor)
+                }
             },
-            colors = ButtonColors(
-                containerColor = buttonsColor,
-                contentColor = Color.White,
-                disabledContainerColor = Color.Unspecified,
-                disabledContentColor = Color.Unspecified,
-            ),
+            bottomBar = { MenuProgreso() }
         )
     }
-}
+
+
 
 @Composable
 fun BodyProgreso(mod: Modifier, buttonsColor: Color) {
@@ -110,12 +94,20 @@ fun BodyProgreso(mod: Modifier, buttonsColor: Color) {
     var text by remember { mutableStateOf("") }
     var isTextFieldVisible by remember { mutableStateOf(false) }
 
-    Column(modifier = mod){
+    Column(modifier = mod
+        .fillMaxWidth()
+        .padding(30.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+
+    ){
         Box(modifier = Modifier
+            .fillMaxWidth()
             .background( Color(0xFF9B977A), shape = RoundedCornerShape(10))
             .border(1.dp ,Color.Black, shape = RoundedCornerShape(10) )
             .width(270.dp)
             .height(560.dp)
+
+
         ){
             Column(
                 modifier = Modifier.fillMaxSize(),
@@ -237,6 +229,23 @@ fun BodyProgreso(mod: Modifier, buttonsColor: Color) {
 
             }
         }
+        Spacer(Modifier.size(16.dp))
+
+        Button(modifier = Modifier.size(80.dp,60.dp),
+            onClick = {/*function()*/},
+            content = {
+                Icon(imageVector =ImageVector.vectorResource(R.drawable.dots),
+                    contentDescription = "Close APP",
+                    modifier = Modifier.size(40.dp)
+                )
+            },
+            colors = ButtonColors(
+                containerColor = buttonsColor,
+                contentColor = Color.White,
+                disabledContainerColor = Color.Unspecified,
+                disabledContentColor = Color.Unspecified,
+            ),
+        )
     }
 
 
@@ -244,49 +253,63 @@ fun BodyProgreso(mod: Modifier, buttonsColor: Color) {
 
 
 
+
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HeaderProgreso(mod: Modifier) {
-   Column(modifier = mod.fillMaxWidth(),
-       horizontalAlignment = Alignment.CenterHorizontally){
-       Spacer(modifier = Modifier.size(40.dp))
-       Row(modifier = mod){
-           Text(modifier = Modifier,
-               fontSize = 35.sp,
-               text = "PROGRESO"
-           )
-       }
-   }
+fun HeaderProgreso(buttonsColor: Color) {
+    TopAppBar(
+        title = {
+            Text("PROGRESO", fontSize = 30.sp,
+                color = Color.White,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth(.95f)
+            )
+        },
+        colors = TopAppBarColors(
+            containerColor = buttonsColor,
+            scrolledContainerColor = buttonsColor,
+            navigationIconContentColor = buttonsColor,
+            titleContentColor = Color.White,
+            actionIconContentColor = buttonsColor
+        ),
+    )
+
 }
 
 @Composable
-fun MenuProgreso(mod: Modifier) {
-    Box(modifier = mod){
-        Column(modifier = Modifier.fillMaxHeight(),
-            verticalArrangement = Arrangement.SpaceEvenly)
-        {
-
-            Icon(imageVector = Icons.Default.Home,
-                contentDescription = "Home APP",
+fun MenuProgreso() {
+    BottomAppBar(
+        modifier = Modifier.height(70.dp),
+        containerColor = Color(0xFF9D8444),
+        contentPadding = PaddingValues(8.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceAround,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = Icons.Default.Home,
+                contentDescription = "Inicio",
                 modifier = Modifier
                     .clickable {}
                     .size(40.dp)
-                    .align(alignment = Alignment.CenterHorizontally)
             )
 
-            Icon(imageVector = ImageVector.vectorResource(R.drawable.progresion),
-                contentDescription = "Progresion APP",
+            Icon(
+                imageVector = ImageVector.vectorResource(R.drawable.progresion),
+                contentDescription = "Progreso",
                 modifier = Modifier
                     .clickable {}
                     .size(40.dp)
-                    .align(alignment = Alignment.CenterHorizontally)
             )
 
-            Icon(imageVector =ImageVector.vectorResource(R.drawable.tareas),
-                contentDescription = "Close APP",
+            Icon(
+                imageVector = ImageVector.vectorResource(R.drawable.tareas),
+                contentDescription = "Tareas",
                 modifier = Modifier
                     .clickable {}
                     .size(40.dp)
-                    .align(alignment = Alignment.CenterHorizontally)
             )
         }
     }

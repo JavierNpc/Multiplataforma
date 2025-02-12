@@ -127,15 +127,6 @@ fun BodyProgresion(mod: Modifier) {
 
 }
 
-//@Composable
-//fun ColumnasHorario(){
-//
-//        Column {
-//            Text("Columna $it ")
-//        }
-//
-//}
-
 
 @Composable
 fun HeaderProgresion(mod: Modifier) {
