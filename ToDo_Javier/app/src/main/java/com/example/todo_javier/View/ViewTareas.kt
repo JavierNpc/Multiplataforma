@@ -1,5 +1,6 @@
 package com.example.todo_javier.View
 
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -22,6 +23,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -43,6 +46,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -53,7 +57,7 @@ import com.example.todo_javier.toDo_MVVM.ViewModel.TareasViewModel
 
 
 @Composable
-fun ModeloTareas(viewModel: TareasViewModel) {
+fun ModeloTareas(viewModel: TareasViewModel, navHome: () -> Unit) {
     val buttonsColor = Color(0xFF9D8444)
 
     Scaffold(
@@ -68,7 +72,7 @@ fun ModeloTareas(viewModel: TareasViewModel) {
                 BodyTareas(viewModel, Modifier.align(Alignment.Center), buttonsColor)
             }
         },
-        bottomBar = { MenuTareas() }
+        bottomBar = { MenuTareas(viewModel,navHome) }
     )
 }
 
@@ -194,7 +198,8 @@ fun HeaderTareas(buttonsColor: Color) {
 }
 
 @Composable
-fun MenuTareas() {
+fun MenuTareas(viewModel: TareasViewModel, navHome: () -> Unit) {
+    val context = LocalContext.current
     BottomAppBar(
         modifier = Modifier.height(70.dp),
         containerColor = Color(0xFF9D8444),
@@ -209,25 +214,35 @@ fun MenuTareas() {
                 imageVector = Icons.Default.Home,
                 contentDescription = "Inicio",
                 modifier = Modifier
-                    .clickable {}
+                    .clickable {navHome()}
                     .size(40.dp)
             )
 
             Icon(
-                imageVector = ImageVector.vectorResource(R.drawable.progresion),
-                contentDescription = "Progreso",
+                imageVector = Icons.Default.Search,
+                contentDescription = "Buscar",
                 modifier = Modifier
                     .clickable {}
                     .size(40.dp)
             )
 
             Icon(
-                imageVector = ImageVector.vectorResource(R.drawable.tareas),
-                contentDescription = "Tareas",
+                imageVector =  Icons.Default.Refresh,
+                contentDescription = "Refresh",
                 modifier = Modifier
-                    .clickable {}
+                    .clickable {
+                        viewModel.reiniciarContador();
+                        Toast.makeText(context, "¡Contador actualizado a 0 !", Toast.LENGTH_SHORT).show()
+
+                    }
                     .size(40.dp)
             )
         }
     }
 }
+
+
+
+
+
+

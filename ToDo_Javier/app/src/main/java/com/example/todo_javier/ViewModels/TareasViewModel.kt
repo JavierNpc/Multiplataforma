@@ -32,6 +32,12 @@ class TareasViewModel : ViewModel() {
     fun eliminarTarea(id: Int) {
         val nuevaLista = _listaDeCards.value?.filterNot { it.id == id }
         _listaDeCards.value = nuevaLista
-        itemIdCounter--
+
     }
+
+    fun reiniciarContador(){
+        itemIdCounter = 0
+    }
+
+
 }

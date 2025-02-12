@@ -24,10 +24,10 @@ fun NavigationController(tareasViewModel: TareasViewModel) {
             )
         }
         composable<Tareas_Nav> {
-            ModeloTareas(tareasViewModel)
+            ModeloTareas(tareasViewModel, navHome = { navController.navigate(ToDo_Nav) },)
         }
         composable<Progreso_Nav> {
-            ModeloProgreso( /*navHome = { navController.navigate(ToDo_Nav)}*/)
+            ModeloProgreso( navHome = { navController.navigate(ToDo_Nav)})
         }
 
 

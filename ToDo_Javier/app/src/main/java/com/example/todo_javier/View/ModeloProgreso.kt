@@ -10,14 +10,12 @@ import androidx.compose.foundation.layout.PaddingValues
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
@@ -33,7 +31,6 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchColors
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldColors
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarColors
 import androidx.compose.runtime.Composable
@@ -53,19 +50,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 import com.example.todo_javier.R
-import com.example.todo_javier.toDo_MVVM.ViewModel.TareasViewModel
+import com.example.todo_javier.navegacion.ToDo_Nav
 
 
-@Preview( showBackground = true)
-@Composable
-fun Vistarprogreso (){
-    ModeloProgreso()
-}
 
 
 
 @Composable
-fun ModeloProgreso(/* navHome: () -> Unit,*/){
+fun ModeloProgreso(navHome: () -> Unit) {
 
         val buttonsColor = Color(0xFF9D8444)
 
@@ -81,7 +73,7 @@ fun ModeloProgreso(/* navHome: () -> Unit,*/){
                     BodyProgreso( Modifier.align(Alignment.Center), buttonsColor)
                 }
             },
-            bottomBar = { MenuProgreso() }
+            bottomBar = { MenuProgreso(navHome) }
         )
     }
 
@@ -103,9 +95,9 @@ fun BodyProgreso(mod: Modifier, buttonsColor: Color) {
         Box(modifier = Modifier
             .fillMaxWidth()
             .background( Color(0xFF9B977A), shape = RoundedCornerShape(10))
-            .border(1.dp ,Color.Black, shape = RoundedCornerShape(10) )
-            .width(270.dp)
-            .height(560.dp)
+            .border(1.dp ,Color.Black, shape = RoundedCornerShape(10))
+            .height(520.dp)
+
 
 
         ){
@@ -229,9 +221,9 @@ fun BodyProgreso(mod: Modifier, buttonsColor: Color) {
 
             }
         }
-        Spacer(Modifier.size(16.dp))
+        Spacer(Modifier.size(18.dp))
 
-        Button(modifier = Modifier.size(80.dp,60.dp),
+        Button(modifier = Modifier.size(80.dp,70.dp),
             onClick = {/*function()*/},
             content = {
                 Icon(imageVector =ImageVector.vectorResource(R.drawable.dots),
@@ -277,9 +269,9 @@ fun HeaderProgreso(buttonsColor: Color) {
 }
 
 @Composable
-fun MenuProgreso() {
+fun MenuProgreso(navHome: () -> Unit) {
     BottomAppBar(
-        modifier = Modifier.height(70.dp),
+        modifier = Modifier.height(60.dp),
         containerColor = Color(0xFF9D8444),
         contentPadding = PaddingValues(8.dp)
     ) {
@@ -292,7 +284,7 @@ fun MenuProgreso() {
                 imageVector = Icons.Default.Home,
                 contentDescription = "Inicio",
                 modifier = Modifier
-                    .clickable {}
+                    .clickable {navHome()}
                     .size(40.dp)
             )
 
