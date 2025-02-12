@@ -1,4 +1,4 @@
-package com.example.todo_javier.core.navegacion
+package com.example.todo_javier.navegacion
 
 import kotlinx.serialization.Serializable
 
@@ -11,8 +11,6 @@ object Tareas_Nav
 @Serializable
 object Progreso_Nav
 
-@Serializable
-object Objetivos_Nav
 
 
 

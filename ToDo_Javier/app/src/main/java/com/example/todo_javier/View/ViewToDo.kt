@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -32,6 +33,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
@@ -39,6 +41,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.todo_javier.core.navegacion.NavigationController
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
@@ -47,7 +50,7 @@ import kotlinx.coroutines.launch
 @Preview ( showBackground = true)
 @Composable
 fun Vista (){
-    NavigationController()
+    NavigationController(hiltViewModel())
 }
 
 
@@ -57,10 +60,10 @@ fun To_Do(
     navTarea: () -> Unit,
     navProgreso: () -> Unit
     ){
-    val buttonsColor = Color(0xFF9D8444)
+    val buttonsColor = Color(0xFF229D5B)
     val scope = rememberCoroutineScope()
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
-    Box(Modifier.background(color = Color(0xFFD2CCA8))){
+    Box(Modifier.background(color = Color(0xFF1B4975))){
         ModalNavigationDrawer(
             drawerState = drawerState,
             drawerContent = {
@@ -74,8 +77,10 @@ fun To_Do(
                 Modifier
                     .fillMaxSize()
                     .padding(20.dp)
+
             ) {
                 HeaderToDo(Modifier.align(Alignment.TopEnd)) { scope.launch { drawerState.open() } } }
+
                 BodyToDo(Modifier.align(Alignment.Center),
                     {navTarea()},
                     {navProgreso()},
@@ -113,6 +118,7 @@ fun MyNavigationDrawer(buttonsColor: Color, onCloseDrawer: () -> Job) {
             HorizontalDivider(Modifier.fillMaxWidth())
             Button(modifier = Modifier.padding(10.dp)
                 .fillMaxWidth(),
+
                 colors = ButtonColors(
                     containerColor = buttonsColor,
                     contentColor = Color.White,
@@ -125,6 +131,8 @@ fun MyNavigationDrawer(buttonsColor: Color, onCloseDrawer: () -> Job) {
             HorizontalDivider(Modifier.fillMaxWidth())
             Button(modifier = Modifier.padding(10.dp)
                 .fillMaxWidth(),
+
+
                 colors = ButtonColors(
                     containerColor = buttonsColor,
                     contentColor = Color.White,
@@ -186,12 +194,15 @@ fun BodyToDo(
     val separacion = 40
     val altura = 200
 
-
-     Box (modifier = mod.fillMaxWidth(.9f),) {
+     Box (modifier = mod.fillMaxWidth(.9f)
+         .offset(0.dp, (-10).dp)) {
          Column (modifier = Modifier
              .fillMaxWidth()
              .fillMaxHeight(.7f),
-             verticalArrangement = Arrangement.SpaceEvenly) {
+             verticalArrangement = Arrangement.SpaceBetween) {
+
+             HorizontalDivider(Modifier.shadow(40.dp, shape = RoundedCornerShape(20.dp)))
+
              Button(shape = RoundedCornerShape(20),
                  onClick = {navTarea()},
                  colors = ButtonColors(
@@ -203,6 +214,7 @@ fun BodyToDo(
                 modifier = Modifier
                 .height(altura.dp)
                 .fillMaxWidth()
+                .shadow(15.dp, shape = RoundedCornerShape(20.dp)), // Sombra
 
              ){
                 Text(modifier = Modifier
@@ -225,6 +237,7 @@ fun BodyToDo(
                  modifier = Modifier
                      .height(altura.dp)
                      .fillMaxWidth()
+                     .shadow(15.dp, shape = RoundedCornerShape(20.dp)), // Sombra
 
              ){
                  Text(modifier = Modifier

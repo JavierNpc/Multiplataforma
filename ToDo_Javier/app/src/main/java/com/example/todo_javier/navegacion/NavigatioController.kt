@@ -4,13 +4,17 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.todo_javier.navegacion.Progreso_Nav
+import com.example.todo_javier.navegacion.Tareas_Nav
+import com.example.todo_javier.navegacion.ToDo_Nav
 
 import com.example.todo_javier.toDo_MVVM.Model.ModeloProgreso
-import com.example.todo_javier.toDo_MVVM.Model.ModeloTareas
+import com.example.todo_javier.View.ModeloTareas
 import com.example.todo_javier.toDo_MVVM.Model.To_Do
+import com.example.todo_javier.toDo_MVVM.ViewModel.TareasViewModel
 
 @Composable
-fun NavigationController() {
+fun NavigationController(tareasViewModel: TareasViewModel) {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination =  ToDo_Nav ) {
         composable<ToDo_Nav> {
@@ -20,14 +24,12 @@ fun NavigationController() {
             )
         }
         composable<Tareas_Nav> {
-            ModeloTareas( /*navHome = { navController.navigate(ToDo_Nav) }*/)
+            ModeloTareas(tareasViewModel)
         }
         composable<Progreso_Nav> {
             ModeloProgreso( /*navHome = { navController.navigate(ToDo_Nav)}*/)
         }
-        composable<Objetivos_Nav> {
-          ModeloTareas()
-        }
+
 
     }
 }
