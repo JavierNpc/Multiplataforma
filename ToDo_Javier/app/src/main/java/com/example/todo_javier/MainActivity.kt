@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.todo_javier.View.componentes.DialogoFiltro
 import com.example.todo_javier.core.navegacion.NavigationController
 import com.example.todo_javier.toDo_MVVM.ViewModel.TareasViewModel
 import com.example.todo_javier.ui.theme.ToDo_JavierTheme
